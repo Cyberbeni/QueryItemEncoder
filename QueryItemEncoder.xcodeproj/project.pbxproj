@@ -8,12 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		75F0B83120FB68F000CB734B /* QueryItemEncoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 75F0B82F20FB68F000CB734B /* QueryItemEncoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75F0B83820FB694A00CB734B /* QueryItemEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F0B83720FB694A00CB734B /* QueryItemEncoder.swift */; };
+		75F0B83A20FB69A900CB734B /* JSONEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F0B83920FB69A900CB734B /* JSONEncoder.swift */; };
+		75F0B83C20FB6D6B00CB734B /* JSONKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F0B83B20FB6D6B00CB734B /* JSONKey.swift */; };
+		75F0B83E20FB6DBA00CB734B /* EncodingError+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F0B83D20FB6DB900CB734B /* EncodingError+Extensions.swift */; };
+		75F0B84020FB6E0000CB734B /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F0B83F20FB6E0000CB734B /* DateFormatter.swift */; };
+		75F0B84320FB6E3500CB734B /* JSONEncodingStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F0B84220FB6E3500CB734B /* JSONEncodingStorage.swift */; };
+		75F0B84520FB6E6500CB734B /* JSONKeyedEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F0B84420FB6E6500CB734B /* JSONKeyedEncodingContainer.swift */; };
+		75F0B84720FB6E8D00CB734B /* JSONUnkeyedEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F0B84620FB6E8D00CB734B /* JSONUnkeyedEncodingContainer.swift */; };
+		75F0B84920FB6ED100CB734B /* JSONReferencingEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F0B84820FB6ED100CB734B /* JSONReferencingEncoder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		75F0B82C20FB68F000CB734B /* QueryItemEncoder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QueryItemEncoder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75F0B82F20FB68F000CB734B /* QueryItemEncoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QueryItemEncoder.h; sourceTree = "<group>"; };
 		75F0B83020FB68F000CB734B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75F0B83720FB694A00CB734B /* QueryItemEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryItemEncoder.swift; sourceTree = "<group>"; };
+		75F0B83920FB69A900CB734B /* JSONEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONEncoder.swift; sourceTree = "<group>"; };
+		75F0B83B20FB6D6B00CB734B /* JSONKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONKey.swift; sourceTree = "<group>"; };
+		75F0B83D20FB6DB900CB734B /* EncodingError+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EncodingError+Extensions.swift"; sourceTree = "<group>"; };
+		75F0B83F20FB6E0000CB734B /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		75F0B84220FB6E3500CB734B /* JSONEncodingStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONEncodingStorage.swift; sourceTree = "<group>"; };
+		75F0B84420FB6E6500CB734B /* JSONKeyedEncodingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONKeyedEncodingContainer.swift; sourceTree = "<group>"; };
+		75F0B84620FB6E8D00CB734B /* JSONUnkeyedEncodingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONUnkeyedEncodingContainer.swift; sourceTree = "<group>"; };
+		75F0B84820FB6ED100CB734B /* JSONReferencingEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONReferencingEncoder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,10 +64,27 @@
 		75F0B82E20FB68F000CB734B /* QueryItemEncoder */ = {
 			isa = PBXGroup;
 			children = (
+				75F0B84120FB6E0500CB734B /* Source */,
 				75F0B82F20FB68F000CB734B /* QueryItemEncoder.h */,
 				75F0B83020FB68F000CB734B /* Info.plist */,
 			);
 			path = QueryItemEncoder;
+			sourceTree = "<group>";
+		};
+		75F0B84120FB6E0500CB734B /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				75F0B83720FB694A00CB734B /* QueryItemEncoder.swift */,
+				75F0B83920FB69A900CB734B /* JSONEncoder.swift */,
+				75F0B83B20FB6D6B00CB734B /* JSONKey.swift */,
+				75F0B83D20FB6DB900CB734B /* EncodingError+Extensions.swift */,
+				75F0B83F20FB6E0000CB734B /* DateFormatter.swift */,
+				75F0B84220FB6E3500CB734B /* JSONEncodingStorage.swift */,
+				75F0B84420FB6E6500CB734B /* JSONKeyedEncodingContainer.swift */,
+				75F0B84620FB6E8D00CB734B /* JSONUnkeyedEncodingContainer.swift */,
+				75F0B84820FB6ED100CB734B /* JSONReferencingEncoder.swift */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,6 +130,7 @@
 				TargetAttributes = {
 					75F0B82B20FB68F000CB734B = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -130,6 +166,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75F0B84920FB6ED100CB734B /* JSONReferencingEncoder.swift in Sources */,
+				75F0B83820FB694A00CB734B /* QueryItemEncoder.swift in Sources */,
+				75F0B83E20FB6DBA00CB734B /* EncodingError+Extensions.swift in Sources */,
+				75F0B83A20FB69A900CB734B /* JSONEncoder.swift in Sources */,
+				75F0B83C20FB6D6B00CB734B /* JSONKey.swift in Sources */,
+				75F0B84520FB6E6500CB734B /* JSONKeyedEncodingContainer.swift in Sources */,
+				75F0B84320FB6E3500CB734B /* JSONEncodingStorage.swift in Sources */,
+				75F0B84720FB6E8D00CB734B /* JSONUnkeyedEncodingContainer.swift in Sources */,
+				75F0B84020FB6E0000CB734B /* DateFormatter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +304,7 @@
 		75F0B83520FB68F000CB734B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -268,6 +314,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = QueryItemEncoder/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -276,6 +323,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = hu.cyberbeni.QueryItemEncoder;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -284,6 +332,7 @@
 		75F0B83620FB68F000CB734B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -293,6 +342,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = QueryItemEncoder/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
