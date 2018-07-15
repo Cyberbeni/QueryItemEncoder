@@ -13,6 +13,8 @@
 //
 //===----------------------------------------------------------------------===//
 
+import Foundation
+
 /// `QueryItemEncoder` facilitates the encoding of `Encodable` values into [URLQueryItem].
 open class QueryItemEncoder {
     // MARK: Options

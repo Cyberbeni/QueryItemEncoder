@@ -1,3 +1,5 @@
+import Foundation
+
 struct _JSONEncodingStorage {
     // MARK: Properties
     

@@ -1,3 +1,5 @@
+import Foundation
+
 struct _JSONKeyedEncodingContainer<K : CodingKey> : KeyedEncodingContainerProtocol {
     typealias Key = K
     

@@ -1,3 +1,5 @@
+import Foundation
+
 class _JSONEncoder : Encoder {
     // MARK: Properties
     
