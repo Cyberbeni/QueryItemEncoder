@@ -14,7 +14,7 @@ class QueryItemEncoderTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        self.input = SampleObject(string: "test", date: Date(timeIntervalSince1970: 0), number: 1, decimal: Decimal(string: "1.99")!)
+        self.input = SampleObject(string: "test", date: Date(timeIntervalSince1970: 0), number: 1, decimal: Decimal(string: "1.999")!)
         self.encoder = QueryItemEncoder()
         self.encoder.dateEncodingStrategy = .iso8601
         self.encoder.floatEncodingStrategy = .fixedPoint(2)
@@ -76,7 +76,7 @@ class QueryItemEncoderTests: XCTestCase {
         do {
             let output = try encoder.encode(self.input)
             if let decimal = output.first(where: { $0.name == "decimal" }) {
-                XCTAssertEqual(decimal.value, "1.99", "Wrong value encoded for key 'decimal'")
+                XCTAssertEqual(decimal.value, "1.999", "Wrong value encoded for key 'decimal'")
             } else {
                 XCTFail("No item found with key 'decimal'")
             }
