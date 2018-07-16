@@ -17,6 +17,7 @@ class QueryItemEncoderTests: XCTestCase {
         self.input = SampleObject(string: "test", date: Date(timeIntervalSince1970: 0), number: 1, decimal: Decimal(string: "1.99")!)
         self.encoder = QueryItemEncoder()
         self.encoder.dateEncodingStrategy = .iso8601
+        self.encoder.floatEncodingStrategy = .fixedPoint(2)
     }
     
     override func tearDown() {
@@ -95,6 +96,52 @@ class QueryItemEncoderTests: XCTestCase {
         let input = "test"
         XCTAssertThrowsError(try encoder.encode(input), "QueryItemEncoder.encode didn't throw error for single value string input") { (error) in
             print(error)
+        }
+    }
+    
+    func test_cgFloat() {
+        let input: CGFloat = 2.001
+        let inputDict = ["cgfloat": input]
+        do {
+            let output = try encoder.encode(inputDict)
+            if let cgfloat = output.first(where: { $0.name == "cgfloat" }) {
+                XCTAssertEqual(cgfloat.value, "2", "Wrong value encoded for key 'cgfloat'")
+            } else {
+                XCTFail("No item found with key 'cgfloat'")
+            }
+        } catch let error {
+            XCTFail("QueryItemEncoder.encode threw error: \(error)")
+        }
+    }
+    
+    func test_double() {
+        let input: Double = 2.6
+        let inputDict = ["double": input]
+        do {
+            let output = try encoder.encode(inputDict)
+            if let double = output.first(where: { $0.name == "double" }) {
+                XCTAssertEqual(double.value, "2.6", "Wrong value encoded for key 'double'")
+            } else {
+                XCTFail("No item found with key 'double'")
+            }
+        } catch let error {
+            XCTFail("QueryItemEncoder.encode threw error: \(error)")
+        }
+    }
+    
+    func test_float() {
+        self.encoder.floatEncodingStrategy = .exactFixedPoint(2)
+        let input: Float = 2.6
+        let inputDict = ["float": input]
+        do {
+            let output = try encoder.encode(inputDict)
+            if let float = output.first(where: { $0.name == "float" }) {
+                XCTAssertEqual(float.value, "2.60", "Wrong value encoded for key 'float'")
+            } else {
+                XCTFail("No item found with key 'float'")
+            }
+        } catch let error {
+            XCTFail("QueryItemEncoder.encode threw error: \(error)")
         }
     }
 }

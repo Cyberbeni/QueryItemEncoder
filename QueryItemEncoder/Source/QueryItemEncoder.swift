@@ -17,7 +17,20 @@ import Foundation
 
 /// `QueryItemEncoder` facilitates the encoding of `Encodable` values into [URLQueryItem].
 open class QueryItemEncoder {
+    
     // MARK: Options
+    
+    /// The strategy to use for encoding `Float`/`Double`/`CGFloat` values.
+    public enum FloatEncodingStrategy {
+        /// Uses String(describing: Float)
+        case `default`
+        
+        /// Uses String(format:"%.UIntf", Float) and then drops `0`s from the end
+        case fixedPoint(UInt)
+        
+        /// Uses String(format:"%.UIntf", Float)
+        case exactFixedPoint(UInt)
+    }
     
     /// The strategy to use for encoding `Date` values.
     public enum DateEncodingStrategy {
@@ -142,6 +155,9 @@ open class QueryItemEncoder {
         }
     }
     
+    /// The strategy to use in encoding `Float`/`Double`/`CGFloat`. Defaults to `.default`.
+    open var floatEncodingStrategy: FloatEncodingStrategy = .default
+    
     /// The strategy to use in encoding dates. Defaults to `.deferredToDate`.
     open var dateEncodingStrategy: DateEncodingStrategy = .deferredToDate
     
@@ -159,6 +175,7 @@ open class QueryItemEncoder {
     
     /// Options set on the top-level encoder to pass down the encoding hierarchy.
     struct _Options {
+        let floatEncodingStrategy: FloatEncodingStrategy
         let dateEncodingStrategy: DateEncodingStrategy
         let dataEncodingStrategy: DataEncodingStrategy
         let nonConformingFloatEncodingStrategy: NonConformingFloatEncodingStrategy
@@ -168,7 +185,8 @@ open class QueryItemEncoder {
     
     /// The options set on the top-level encoder.
     var options: _Options {
-        return _Options(dateEncodingStrategy: dateEncodingStrategy,
+        return _Options(floatEncodingStrategy: floatEncodingStrategy,
+                        dateEncodingStrategy: dateEncodingStrategy,
                         dataEncodingStrategy: dataEncodingStrategy,
                         nonConformingFloatEncodingStrategy: nonConformingFloatEncodingStrategy,
                         keyEncodingStrategy: keyEncodingStrategy,

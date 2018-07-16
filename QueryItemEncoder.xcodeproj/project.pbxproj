@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7524629020FD0F5100036D8E /* UInt+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7524628F20FD0F5100036D8E /* UInt+Extensions.swift */; };
+		7524629120FD116000036D8E /* UInt+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7524628F20FD0F5100036D8E /* UInt+Extensions.swift */; };
+		7524629320FD16E300036D8E /* String+Entensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7524629220FD16E300036D8E /* String+Entensions.swift */; };
+		7524629420FD16E300036D8E /* String+Entensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7524629220FD16E300036D8E /* String+Entensions.swift */; };
 		75F0B83120FB68F000CB734B /* QueryItemEncoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 75F0B82F20FB68F000CB734B /* QueryItemEncoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		75F0B83820FB694A00CB734B /* QueryItemEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F0B83720FB694A00CB734B /* QueryItemEncoder.swift */; };
 		75F0B83A20FB69A900CB734B /* JSONEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F0B83920FB69A900CB734B /* JSONEncoder.swift */; };
@@ -42,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7524628F20FD0F5100036D8E /* UInt+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UInt+Extensions.swift"; sourceTree = "<group>"; };
+		7524629220FD16E300036D8E /* String+Entensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Entensions.swift"; sourceTree = "<group>"; };
 		75F0B82C20FB68F000CB734B /* QueryItemEncoder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QueryItemEncoder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75F0B82F20FB68F000CB734B /* QueryItemEncoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QueryItemEncoder.h; sourceTree = "<group>"; };
 		75F0B83020FB68F000CB734B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -119,6 +125,8 @@
 				75F0B84420FB6E6500CB734B /* JSONKeyedEncodingContainer.swift */,
 				75F0B84620FB6E8D00CB734B /* JSONUnkeyedEncodingContainer.swift */,
 				75F0B84820FB6ED100CB734B /* JSONReferencingEncoder.swift */,
+				7524628F20FD0F5100036D8E /* UInt+Extensions.swift */,
+				7524629220FD16E300036D8E /* String+Entensions.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -243,11 +251,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				75F0B84920FB6ED100CB734B /* JSONReferencingEncoder.swift in Sources */,
+				7524629020FD0F5100036D8E /* UInt+Extensions.swift in Sources */,
 				75F0B83820FB694A00CB734B /* QueryItemEncoder.swift in Sources */,
 				75F0B83E20FB6DBA00CB734B /* EncodingError+Extensions.swift in Sources */,
 				75F0B83A20FB69A900CB734B /* JSONEncoder.swift in Sources */,
 				75F0B83C20FB6D6B00CB734B /* JSONKey.swift in Sources */,
 				75F0B84520FB6E6500CB734B /* JSONKeyedEncodingContainer.swift in Sources */,
+				7524629320FD16E300036D8E /* String+Entensions.swift in Sources */,
 				75F0B84320FB6E3500CB734B /* JSONEncodingStorage.swift in Sources */,
 				75F0B84720FB6E8D00CB734B /* JSONUnkeyedEncodingContainer.swift in Sources */,
 				75F0B84020FB6E0000CB734B /* DateFormatter.swift in Sources */,
@@ -264,7 +274,9 @@
 				75F0B86320FB76B200CB734B /* JSONReferencingEncoder.swift in Sources */,
 				75F0B85A20FB75CE00CB734B /* SampleObject.swift in Sources */,
 				75F0B86220FB76B200CB734B /* JSONUnkeyedEncodingContainer.swift in Sources */,
+				7524629420FD16E300036D8E /* String+Entensions.swift in Sources */,
 				75F0B86120FB76B200CB734B /* JSONKeyedEncodingContainer.swift in Sources */,
+				7524629120FD116000036D8E /* UInt+Extensions.swift in Sources */,
 				75F0B85F20FB76B200CB734B /* DateFormatter.swift in Sources */,
 				75F0B85C20FB76B200CB734B /* JSONEncoder.swift in Sources */,
 				75F0B85120FB75A800CB734B /* QueryItemEncoderTests.swift in Sources */,

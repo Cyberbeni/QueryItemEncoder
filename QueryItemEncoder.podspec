@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
     # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
     s.name              = 'QueryItemEncoder'
-    s.version           = '1.0.0'
+    s.version           = '1.1.0'
     s.summary           = 'Converts Encodable types into [URLQueryItem]'
     s.homepage          = 'https://github.com/Cyberbeni/QueryItemEncoder'
 
@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
     #  Specify the location from where the source should be retrieved.
     #  Supports git, hg, bzr, svn and HTTP.
     #
-    s.source            = { :git => 'https://github.com/Cyberbeni/QueryItemEncoder.git', :tag => '1.0.0'}
+    s.source            = { :git => 'https://github.com/Cyberbeni/QueryItemEncoder.git', :tag => '1.1.0'}
     s.source_files = 'QueryItemEncoder/**/*.{swift}'
     s.swift_version = '4.1'
 

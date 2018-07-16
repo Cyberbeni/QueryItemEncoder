@@ -1,4 +1,5 @@
 import Foundation
+import CoreGraphics
 
 class _JSONEncoder : Encoder {
     // MARK: Properties
@@ -154,12 +155,53 @@ extension _JSONEncoder : SingleValueEncodingContainer {
     
     public func encode(_ value: Float) throws {
         assertCanEncodeNewValue()
-        try self.storage.push(container: self.box(value))
+        switch options.floatEncodingStrategy {
+        case .default:
+            try self.storage.push(container: self.box(value))
+        case let .fixedPoint(digitNumber):
+            var valueToEncode = String(format: digitNumber.floatFormat, value)
+            if digitNumber > 0 {
+                valueToEncode.dropZeroes()
+            }
+            self.storage.push(container: self.box(valueToEncode))
+        case let .exactFixedPoint(digitNumber):
+            let valueToEncode = String(format: digitNumber.floatFormat, value)
+            self.storage.push(container: self.box(valueToEncode))
+        }
     }
     
     public func encode(_ value: Double) throws {
         assertCanEncodeNewValue()
-        try self.storage.push(container: self.box(value))
+        switch options.floatEncodingStrategy {
+        case .default:
+            try self.storage.push(container: self.box(value))
+        case let .fixedPoint(digitNumber):
+            var valueToEncode = String(format: digitNumber.floatFormat, value)
+            if digitNumber > 0 {
+                valueToEncode.dropZeroes()
+            }
+            self.storage.push(container: self.box(valueToEncode))
+        case let .exactFixedPoint(digitNumber):
+            let valueToEncode = String(format: digitNumber.floatFormat, value)
+            self.storage.push(container: self.box(valueToEncode))
+        }
+    }
+    
+    public func encode(_ value: CGFloat) throws {
+        assertCanEncodeNewValue()
+        switch options.floatEncodingStrategy {
+        case .default:
+            try self.storage.push(container: self.box(value))
+        case let .fixedPoint(digitNumber):
+            var valueToEncode = String(format: digitNumber.floatFormat, value)
+            if digitNumber > 0 {
+                valueToEncode.dropZeroes()
+            }
+            self.storage.push(container: self.box(valueToEncode))
+        case let .exactFixedPoint(digitNumber):
+            let valueToEncode = String(format: digitNumber.floatFormat, value)
+            self.storage.push(container: self.box(valueToEncode))
+        }
     }
     
     public func encode<T : Encodable>(_ value: T) throws {
