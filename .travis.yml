@@ -4,7 +4,7 @@ osx_image: xcode9.4
 script:
   - pod spec lint QueryItemEncoder.podspec
   - xcodebuild -project QueryItemEncoder.xcodeproj -scheme QueryItemEncoderTests build-for-testing -sdk iphonesimulator
-  - xctool -project QueryItemEncoder.xcodeproj -scheme QueryItemEncoderTests run-tests -sdk iphonesimulator
+  - xctool -project QueryItemEncoder.xcodeproj -scheme QueryItemEncoderTests run-tests -sdk iphonesimulator GCC_GENERATE_TEST_COVERAGE_FILES=YES
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
