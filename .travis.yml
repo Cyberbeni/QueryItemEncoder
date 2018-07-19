@@ -7,4 +7,4 @@ before_install:
 
 script:
   - pod spec lint QueryItemEncoder.podspec
-  - xctool -project QueryItemEncoder.xcodeproj -scheme QueryItemEncoderTests run-tests
+  - xctool -project QueryItemEncoder.xcodeproj -scheme QueryItemEncoderTests run-tests -sdk iphonesimulator
