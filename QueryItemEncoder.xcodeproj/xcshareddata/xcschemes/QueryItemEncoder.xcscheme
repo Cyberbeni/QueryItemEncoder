@@ -28,7 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "75F0B84D20FB75A700CB734B"
+               BuildableName = "QueryItemEncoderTests.xctest"
+               BlueprintName = "QueryItemEncoderTests"
+               ReferencedContainer = "container:QueryItemEncoder.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "75F0B82B20FB68F000CB734B"
+            BuildableName = "QueryItemEncoder.framework"
+            BlueprintName = "QueryItemEncoder"
+            ReferencedContainer = "container:QueryItemEncoder.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
