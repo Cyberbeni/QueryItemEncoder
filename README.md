@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Cyberbeni/QueryItemEncoder.svg?branch=master)](https://travis-ci.org/Cyberbeni/QueryItemEncoder) [![Code coverage](https://codecov.io/github/Cyberbeni/QueryItemEncoder/coverage.svg?branch=master)](https://codecov.io/github/Cyberbeni/QueryItemEncoder?branch=master)
+
 # Installing
 
 Add `pod 'QueryItemEncoder'` to your podfile
