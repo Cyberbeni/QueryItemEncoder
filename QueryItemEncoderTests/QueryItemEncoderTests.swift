@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import QueryItemEncoder
 
 class QueryItemEncoderTests: XCTestCase {
     var encoder: QueryItemEncoder!
